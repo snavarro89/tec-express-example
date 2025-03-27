@@ -14,11 +14,11 @@ class MongoService extends DBService {
   }
 
   async getAllCustomers() {
-    return await this.customers.find({}).toArray();
+    return this.customers.find({}).toArray();
   }
 
   async getCustomerById(id) {
-    return await this.customers.findOne({ _id: id });
+    return this.customers.findOne({ _id: id });
   }
 
   async createCustomer(name, email) {

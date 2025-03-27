@@ -1,7 +1,7 @@
 const request = require('supertest');
 const express = require('express');
 const CustomerHttpHandler = require('../handlers/customer');
-const CustomerController = require('../controllers/customer');
+// const CustomerController = require('../controllers/customer');
 
 jest.mock('../controllers/customer');
 
