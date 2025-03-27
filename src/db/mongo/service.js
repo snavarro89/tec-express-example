@@ -1,5 +1,5 @@
-const DBService = require('../dbService');
 const { MongoClient } = require('mongodb');
+const DBService = require('../dbService');
 
 class MongoService extends DBService {
   constructor(connectionString) {
@@ -29,7 +29,7 @@ class MongoService extends DBService {
   async updateCustomer(id, name, email) {
     await this.customers.updateOne(
       { _id: id },
-      { $set: { name, email } }
+      { $set: { name, email } },
     );
     return { id, name, email };
   }
@@ -39,4 +39,4 @@ class MongoService extends DBService {
   }
 }
 
-module.exports = MongoService; 
+module.exports = MongoService;

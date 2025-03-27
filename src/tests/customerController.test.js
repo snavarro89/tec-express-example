@@ -36,7 +36,7 @@ describe('CustomerController', () => {
   test('should throw an error if customer not found', async () => {
     mockService.getCustomerById.mockResolvedValue(null);
 
-    await expect(controller.getById(1)).rejects.toThrow("Customer not found");
+    await expect(controller.getById(1)).rejects.toThrow('Customer not found');
   });
 
   test('should create a customer', async () => {
@@ -61,7 +61,7 @@ describe('CustomerController', () => {
     mockService.deleteCustomer.mockResolvedValue();
 
     const result = await controller.delete(1);
-    expect(result).toEqual({ message: "Customer deleted" });
+    expect(result).toEqual({ message: 'Customer deleted' });
     expect(mockService.deleteCustomer).toHaveBeenCalledWith(1);
   });
 });

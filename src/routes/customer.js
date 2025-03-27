@@ -1,4 +1,5 @@
 const express = require('express');
+
 const router = express.Router();
 const CustomerHttpHandler = require('../handlers/customer');
 const CustomerServiceFactory = require('../db/factory');

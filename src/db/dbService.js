@@ -20,4 +20,4 @@ class DBService {
   }
 }
 
-module.exports = DBService; 
+module.exports = DBService;
