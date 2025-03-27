@@ -1,15 +1,17 @@
-const PostgresService = require('./postgres/service');
-const MongoService = require('./postgres/service');
-const FakeService = require('./postgres/service');
+// Fer estuvo aqui
+
+const PostgresService = require("./postgres/service");
+const MongoService = require("./postgres/service");
+const FakeService = require("./postgres/service");
 
 class DBFactory {
   static create(type, connectionString) {
     switch (type.toLowerCase()) {
-      case 'postgres':
+      case "postgres":
         return new PostgresService(connectionString);
-      case 'mongo':
+      case "mongo":
         return new MongoService(connectionString);
-      case 'fake':
+      case "faaaaake":
         return new FakeService();
       default:
         throw new Error(`Unknown service type: ${type}`);
@@ -17,4 +19,4 @@ class DBFactory {
   }
 }
 
-module.exports = DBFactory; 
+module.exports = DBFactory;
