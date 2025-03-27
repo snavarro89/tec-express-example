@@ -2,7 +2,7 @@ name: CI
 
 on:
   pull_request:
-    branches: [ main, master ]
+    types: [opened, synchronize, reopened, ready_for_review, converted_to_draft]
   push:
     branches: [ main, master ]
 
@@ -29,5 +29,5 @@ jobs:
     - name: Run linting
       run: npm run lint
 
-    - name: Run tests with coverage
-      run: npm test -- --coverage 
+    - name: Run tests
+      run: npm test 
