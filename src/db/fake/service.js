@@ -32,4 +32,4 @@ class FakeService extends DBService {
   }
 }
 
-module.exports = FakeService; 
+module.exports = FakeService;

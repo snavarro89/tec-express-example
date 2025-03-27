@@ -18,7 +18,7 @@ describe('CustomerHttpHandler', () => {
       getById: jest.fn(),
       create: jest.fn(),
       update: jest.fn(),
-      delete: jest.fn()
+      delete: jest.fn(),
     };
 
     const httpHandler = new CustomerHttpHandler(mockController);
@@ -34,7 +34,7 @@ describe('CustomerHttpHandler', () => {
   describe('GET /customers', () => {
     it('should return all customers', async () => {
       const customers = [
-        { id: 1, name: 'John Doe', email: 'john@example.com' }
+        { id: 1, name: 'John Doe', email: 'john@example.com' },
       ];
       mockController.getAll.mockResolvedValue(customers);
 

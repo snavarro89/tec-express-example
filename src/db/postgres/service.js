@@ -1,5 +1,5 @@
-const DBService = require('../dbService');
 const { Pool } = require('pg');
+const DBService = require('../dbService');
 
 class PostgresService extends DBService {
   constructor(connectionString) {
@@ -20,7 +20,7 @@ class PostgresService extends DBService {
   async createCustomer(name, email) {
     const result = await this.db.query(
       'INSERT INTO customers (name, email) VALUES ($1, $2) RETURNING *',
-      [name, email]
+      [name, email],
     );
     return result.rows[0];
   }
@@ -28,7 +28,7 @@ class PostgresService extends DBService {
   async updateCustomer(id, name, email) {
     const result = await this.db.query(
       'UPDATE customers SET name = $1, email = $2 WHERE id = $3 RETURNING *',
-      [name, email, id]
+      [name, email, id],
     );
     return result.rows[0];
   }
@@ -38,4 +38,4 @@ class PostgresService extends DBService {
   }
 }
 
-module.exports = PostgresService; 
+module.exports = PostgresService;

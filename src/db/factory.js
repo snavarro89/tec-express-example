@@ -17,4 +17,4 @@ class DBFactory {
   }
 }
 
-module.exports = DBFactory; 
+module.exports = DBFactory;
