@@ -1,6 +1,3 @@
-const CustomerServiceFactory = require('../db/factory');
-const CustomerController = require('../controllers/customer');
-
 class CustomerHttpHandler {
   constructor(customerController) {
     this.customerController = customerController;
