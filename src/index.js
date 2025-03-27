@@ -7,3 +7,4 @@ const connectionString = process.env.DATABASE_URL;
 
 const customerService = CustomerServiceFactory.create(serviceType, connectionString);
 const customerController = new CustomerController(customerService); 
+
