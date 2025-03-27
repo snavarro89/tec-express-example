@@ -9,7 +9,7 @@ class CustomerController {
   
     async getById(id) {
       const customer = await this.service.getCustomerById(id);
-      if (!customer) throw new Error("Customer not found");
+      if (!customer) throw new Error("Customer not found on the database");
       return customer;
     }
   
