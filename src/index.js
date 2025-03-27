@@ -5,5 +5,5 @@ const CustomerController = require('./controllers/customer');
 const serviceType = process.env.DB_TYPE || 'postgres'; // 'postgres', 'mongo', or 'fake'
 const connectionString = process.env.DATABASE_URL;
 
-const customerService = CustomerServiceFactory.create(serviceType, connectionString);
+//const customerService = CustomerServiceFactory.create(serviceType, connectionString);
 const customerController = new CustomerController(customerService); 
