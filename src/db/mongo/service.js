@@ -14,15 +14,15 @@ class MongoService extends DBService {
   }
 
   async getAllCustomers() {
-    return await this.customers.find({}).toArray();
+    return this.customers.find({}).toArray();
   }
 
   async getCustomerById(id) {
-    return await this.customers.findOne({ _id: id });
+    return this.customers.findOne({ _id: id });
   }
 
   async createCustomer(name, email) {
-    const result = await this.customers.insertOne({ name, email });
+    const result = this.customers.insertOne({ name, email });
     return { id: result.insertedId, name, email };
   }
 
