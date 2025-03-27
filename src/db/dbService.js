@@ -1,23 +1,25 @@
+/*
 class DBService {
   async getAllCustomers() {
     throw new Error('Method not implemented');
   }
 
-  async getCustomerById(id) {
+  async getCustomerById() {
     throw new Error('Method not implemented');
   }
 
-  async createCustomer(name, email) {
+  async createCustomer() {
     throw new Error('Method not implemented');
   }
 
-  async updateCustomer(id, name, email) {
+  async updateCustomer() {
     throw new Error('Method not implemented');
   }
 
-  async deleteCustomer(id) {
+  async deleteCustomer() {
     throw new Error('Method not implemented');
   }
 }
 
 module.exports = DBService;
+*/

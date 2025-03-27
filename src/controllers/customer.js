@@ -4,7 +4,7 @@ class CustomerController {
   }
 
   async getAll() {
-    return await this.service.getAllCustomers();
+    return this.service.getAllCustomers();
   }
 
   async getById(id) {
@@ -14,11 +14,11 @@ class CustomerController {
   }
 
   async create(name, email) {
-    return await this.service.createCustomer(name, email);
+    return this.service.createCustomer(name, email);
   }
 
   async update(id, name, email) {
-    return await this.service.updateCustomer(id, name, email);
+    return this.service.updateCustomer(id, name, email);
   }
 
   async delete(id) {
