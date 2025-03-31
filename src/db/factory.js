@@ -1,6 +1,6 @@
 const PostgresService = require('./postgres/service');
-const MongoService = require('./postgres/service');
-const FakeService = require('./postgres/service');
+const MongoService = require('./mongo/service');
+const FakeService = require('./fake/service');
 
 class DBFactory {
   static create(type, connectionString) {
